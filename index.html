@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap v05 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/shopping-cart.png" type="image/x-icon">
+    <title>Shop</title>
+</head>
+
+<body>
+
+    <!-- start header fixed-top-->
+    <header class="shadow">
+        <nav class="navbar navbar-expand-md bg-light">
+            <div class="container-fluid">
+                <a href="" class="text-decoration-none border-end border-primary p-2 ps-4">
+                    <i class="fa-solid fa-shop h4" style="width: 105px;"> Shop</i>
+                </a>
+
+                <!-- start cart shopping -->
+                <div style="min-width: 100px;" class="btn btn-primary ms-2" type="button" data-bs-toggle="modal"
+                    data-bs-target="#myModal">
+                    <i class="fa-solid fa-cart-shopping fs-4 me-1"></i>
+                    <span id="numOfProducts" class="badge bg-danger"></span>
+                </div>
+
+                <!-- The Modal -->
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header bg-primary">
+                                <h4 class="modal-title text-white">Your Cart</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            </div>
+
+                            <!-- Modal body -->
+                            <div id="listOfProducts" class="modal-body overflow-auto" style="max-height: 400px;">
+                                <h3 id="empty">Cart is empty <i class="fa-regular fa-face-dizzy"></i></h3>
+                            </div>
+
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <div id="showTotalPrice" style="display: none;"
+                                    class="bg-success position-absolute start-0 ms-3 p-2 rounded text-white"></div>
+                                <button id="TotalPrice" type="button" class="btn btn-primary"
+                                    style="display: none;">Total Price</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- end cart shopping -->
+
+                <button class="navbar-toggler text-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mynavbar">
+                    <i class="fa-solid fa-bars text-primary fs-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mt-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 me-3 ms-md-3">
+                            <a href="" class="btn btn-outline-primary active">Home</a>
+                        </li>
+
+                        <div class="dropdown">
+                            <button type="button"
+                                class="btn btn-outline-primary dropdown-toggle mt-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 me-3"
+                                data-bs-toggle="dropdown">
+                                Category
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Laptops</a></li>
+                                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                                <li><a class="dropdown-item" href="#">Data Storage</a></li>
+                                <li><a class="dropdown-item" href="#">Printers</a></li>
+                                <li><a class="dropdown-item" href="#">Sleeves</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Other Categories</a></li>
+                            </ul>
+                        </div>
+
+                        <li class="nav-item mt-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 me-3">
+                            <a href="" class="btn btn-outline-primary">Help</a>
+                        </li>
+                        <li
+                            class="nav-item mt-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0 mb-3 mb-md-0 mb-lg-0 mb-xl-0 mb-xxl-0 me-3">
+                            <a href="" class="btn btn-outline-primary">About</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control border-primary me-2" type="text" placeholder="Search">
+                        <button class="btn btn-primary" type="button">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- end header -->
+
+    <!-- start products sec -->
+    <section class="container-fluid">
+        <div class=" row justify-content-evenly gap-5 p-5">
+
+            <div style="order: 7;"
+                class="card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 p-0 bg-light shadow overflow-hidden">
+                <img src="images/Bag.jpg" class="card-img-top" alt="Bag">
+                <div class="card-body">
+                    <p class="card-text">RAHALA BNG-126 15.6-Inch Laptop Business Waterproof YKK Zipper Premium Quality
+                        Backpack Bag.</p>
+                    <h5 class="card-title">EGP 3,295.00</h5>
+                    <small class="text-secondary"><del>EGP 3,625.00</del></small>
+                    <div class="mb-2 mt-2">
+                        <i id="star11" class="fa-solid fa-star"></i>
+                        <i id="star12" class="fa-solid fa-star"></i>
+                        <i id="star13" class="fa-solid fa-star"></i>
+                        <i id="star14" class="fa-solid fa-star"></i>
+                        <i id="star15" class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="d-grid gap-2 position-absolute bottom-0 end-0 p-3">
+                        <button name="Backpack Bag" price="3295" id="addToCard1" class="btn btn-primary">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="order: 8;"
+                class="card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 p-0 bg-light shadow overflow-hidden">
+                <img src="images/Headset.jpg" class="card-img-top" alt="Headset">
+                <div class="card-body">
+                    <p class="card-text">Logitech Astro A10 Gaming Headset Microphone(Red).</p>
+                    <h5 class="card-title">EGP 3,750.00</h5>
+                    <small class="text-secondary"><del>EGP 4,250.00</del></small>
+                    <div class="mb-2 mt-2">
+                        <i id="star21" class="fa-solid fa-star"></i>
+                        <i id="star22" class="fa-solid fa-star"></i>
+                        <i id="star23" class="fa-solid fa-star"></i>
+                        <i id="star24" class="fa-solid fa-star"></i>
+                        <i id="star25" class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="d-grid gap-2 position-absolute bottom-0 end-0 p-3">
+                        <button name="Headset" price="3750" id="addToCard2" class="btn btn-primary">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="order: 5;"
+                class="card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 p-0 bg-light shadow overflow-hidden">
+                <img src="images/Keyboard.jpg" class="card-img-top" alt="Keyboard">
+                <div class="card-body">
+                    <p class="card-text">Aula F2088 Full Gaming Mechanical Keyboard - BLUE Switch - Rainbow Backlight -
+                        EN
+                        Key.</p>
+                    <h5 class="card-title">EGP 1,099.00</h5>
+                    <small class="text-secondary"><del>EGP 1,350.00</del></small>
+                    <div class="mb-2 mt-2">
+                        <i id="star31" class="fa-solid fa-star"></i>
+                        <i id="star32" class="fa-solid fa-star"></i>
+                        <i id="star33" class="fa-solid fa-star"></i>
+                        <i id="star34" class="fa-solid fa-star"></i>
+                        <i id="star35" class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="d-grid gap-2 position-absolute bottom-0 end-0 p-3">
+                        <button name="Keyboard" price="1099" id="addToCard3" class="btn btn-primary">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="order: 3;"
+                class="card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 p-0 bg-light shadow overflow-hidden">
+                <img src="images/Laptop HP.jpg" class="card-img-top" alt="Laptop">
+                <div class="card-body">
+                    <p class="card-text">HP Victus 15-fa1039ne (801U6EA) (Intel Core I7-13700H - Ram 8GB - Hard 512GB
+                        SSD - Color Silver).</p>
+                    <h5 class="card-title">EGP 54,999.00</h5>
+                    <small class="text-secondary"><del>EGP 59,999.00</del></small>
+                    <div class="mb-2 mt-2">
+                        <i id="star41" class="fa-solid fa-star"></i>
+                        <i id="star42" class="fa-solid fa-star"></i>
+                        <i id="star43" class="fa-solid fa-star"></i>
+                        <i id="star44" class="fa-solid fa-star"></i>
+                        <i id="star45" class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="d-grid gap-2 position-absolute bottom-0 end-0 p-3">
+                        <button name="HP Laptop" price="54999" id="addToCard4" class="btn btn-primary">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="order: 1;"
+                class="card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 p-0 bg-light shadow overflow-hidden">
+                <img src="images/Laptop Lenovo.jpg" class="card-img-top" alt="Laptop">
+                <div class="card-body">
+                    <p class="card-text">Lenovo Legion 5 16IRX9 (Intel® Core™ I7-14650HX- Ram 16GB DDR5 - Hard 1TB SSD -
+                        Color Luna Grey).</p>
+                    <h5 class="card-title">EGP 97,777.00</h5>
+                    <small class="text-secondary"><del>EGP 99,999.00</del></small>
+                    <div class="mb-2 mt-2">
+                        <i id="star51" class="fa-solid fa-star"></i>
+                        <i id="star52" class="fa-solid fa-star"></i>
+                        <i id="star53" class="fa-solid fa-star"></i>
+                        <i id="star54" class="fa-solid fa-star"></i>
+                        <i id="star55" class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="d-grid gap-2 position-absolute bottom-0 end-0 p-3">
+                        <button name="Lenovo Laptop" price="97777" id="addToCard5" class="btn btn-primary">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="order: 4;"
+                class="card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 p-0 bg-light shadow overflow-hidden">
+                <img src="images/Mouse.jpg" class="card-img-top" alt="Mouse">
+                <div class="card-body">
+                    <p class="card-text">Ugreen Wireless Mouse Bluetooth 5.0 4000DPI 6Mute Buttons 2.4G Mice.</p>
+                    <h5 class="card-title">EGP 619.00</h5>
+                    <small class="text-secondary"><del>EGP 889.00</del></small>
+                    <div class="mb-2 mt-2">
+                        <i id="star61" class="fa-solid fa-star"></i>
+                        <i id="star62" class="fa-solid fa-star"></i>
+                        <i id="star63" class="fa-solid fa-star"></i>
+                        <i id="star64" class="fa-solid fa-star"></i>
+                        <i id="star65" class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="d-grid gap-2 position-absolute bottom-0 end-0 p-3">
+                        <button name="Mouse" price="619" id="addToCard6" class="btn btn-primary">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="order: 9;"
+                class="card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 p-0 bg-light shadow overflow-hidden">
+                <img src="images/Printer.jpg" class="card-img-top" alt="Printer">
+                <div class="card-body">
+                    <p class="card-text">Canon Pixma G2411 Multifunction Printer.</p>
+                    <h5 class="card-title">EGP 6,499.00</h5>
+                    <small class="text-secondary"><del>EGP 7,200.00</del></small>
+                    <div class="mb-2 mt-2">
+                        <i id="star71" class="fa-solid fa-star"></i>
+                        <i id="star72" class="fa-solid fa-star"></i>
+                        <i id="star73" class="fa-solid fa-star"></i>
+                        <i id="star74" class="fa-solid fa-star"></i>
+                        <i id="star75" class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="d-grid gap-2 position-absolute bottom-0 end-0 p-3">
+                        <button name="Printer" price="6499" id="addToCard7" class="btn btn-primary">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="order: 6;"
+                class="card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 p-0 bg-light shadow overflow-hidden">
+                <img src="images/Sandisk.jpg" class="card-img-top" alt="Sandisk">
+                <div class="card-body">
+                    <p class="card-text">Sandisk 128GB Ultra Dual Drive Go USB 3.1 & Type-C - SDDDC3-128G-G46.</p>
+                    <h5 class="card-title">EGP 790.00</h5>
+                    <small class="text-secondary"><del>EGP 1,100.00</del></small>
+                    <div class="mb-2 mt-2">
+                        <i id="star81" class="fa-solid fa-star"></i>
+                        <i id="star82" class="fa-solid fa-star"></i>
+                        <i id="star83" class="fa-solid fa-star"></i>
+                        <i id="star84" class="fa-solid fa-star"></i>
+                        <i id="star85" class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="d-grid gap-2 position-absolute bottom-0 end-0 p-3">
+                        <button name="Sandisk" price="790" id="addToCard8" class="btn btn-primary">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="order: 2;"
+                class="card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3 p-0 bg-light shadow overflow-hidden">
+                <img src="images/Laptop Dell.jpg" class="card-img-top" alt="Laptop">
+                <div class="card-body">
+                    <p class="card-text">DELL Latitude 5520 BTX: Core I5-1145G7 (4 Core, 8M Cache, Base 2.6GHz, Up To
+                        4.4GHz, VPro).</p>
+                    <h5 class="card-title">EGP 40,000.00</h5>
+                    <small class="text-secondary"><del>EGP 45,000.00</del></small>
+                    <div class="mb-2 mt-2">
+                        <i id="star91" class="fa-solid fa-star"></i>
+                        <i id="star92" class="fa-solid fa-star"></i>
+                        <i id="star93" class="fa-solid fa-star"></i>
+                        <i id="star94" class="fa-solid fa-star"></i>
+                        <i id="star95" class="fa-solid fa-star"></i>
+                    </div>
+                    <div class="d-grid gap-2 position-absolute bottom-0 end-0 p-3">
+                        <button name="Dell Laptop" price="40000" id="addToCard9" class="btn btn-primary">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- end products sec -->
+
+    <!-- start footer -->
+    <footer class="bg-secondary display-1 text-center" style="height: 250px;">Footer</footer>
+    <!-- end footer -->
+
+
+    <!-- Bootstrap v05 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
